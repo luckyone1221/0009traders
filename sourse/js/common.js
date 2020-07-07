@@ -263,7 +263,17 @@ function eventHandler() {
 		}).fail(function () { });
 
 	});
+	//luckyoneJS
+	$('.sTrainingProgramm__block-header').click(function () {
+		$(this).toggleClass('active');
 
+		$(this.parentElement).find('.sTrainingProgramm__block-content').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+
+	});
+
+	//end luckyoneJS
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {
 		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
@@ -280,7 +290,7 @@ function eventHandler() {
 		// We execute the same script as before
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+	}, {passive : true});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

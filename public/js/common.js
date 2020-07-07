@@ -232,7 +232,15 @@ function eventHandler() {
 				// yaCounter55828534.reachGoal('zakaz');
 			}, 4000);
 		}).fail(function () {});
-	});
+	}); //luckyoneJS
+
+	$('.sTrainingProgramm__block-header').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.sTrainingProgramm__block-content').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //end luckyoneJS
+
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {
@@ -248,6 +256,8 @@ function eventHandler() {
 		// We execute the same script as before
 		var vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+	}, {
+		passive: true
 	});
 }
 

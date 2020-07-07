@@ -1,0 +1,20 @@
+mixin sTrainingProgramm()
+	// start sTrainingProgramm
+	+b.SECTION.sTrainingProgramm.section#sTrainingProgramm&attributes(attributes)
+		+e.section-bg
+			img.lazy(src='#' data-src='img/3in1-bg.svg' alt="")
+		.container
+			+b.section-title
+				h2 Программа тренинга «Умные инвестиции три-в-одном»
+			+e.blocks-box
+				+block3in1('Блок 1. Подготовка к международным инвестициям')
+				+block3in1('Блок 2. Стратегии последовательного создания капитала', '')
+	// end sTrainingProgramm
+
+mixin block3in1(headlineTxt, displayClass='active')
+	+e.block
+		+e.block-header(class=displayClass)
+			+e.headline=headlineTxt
+			+e.open-btn
+		+e.block-content(class=displayClass)
+			| 123
