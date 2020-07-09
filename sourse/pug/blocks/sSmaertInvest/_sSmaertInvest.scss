@@ -1,8 +1,7 @@
 
-	// start .header
-	.header {
-		 background: linear-gradient(139.72deg, #2636CA -1.13%, #4C0980 65.92%);
-		 color: #ffffff;
+	// start .sSmaertInvest
+	.sSmaertInvest {
+		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -27,4 +26,4 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
-} // end.header
+} // end.sSmaertInvest

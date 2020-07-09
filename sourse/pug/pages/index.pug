@@ -9,20 +9,31 @@ include ../blocks/sNuance/_sNuance.pug
 include ../blocks/sLifeAfter/_sLifeAfter.pug
 include ../blocks/sGreenLvl/_sGreenLvl.pug
 include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sFormula/_sFormula.pug
+include ../blocks/sSmaertInvest/_sSmaertInvest.pug
+include ../blocks/sSpeedElevator/_sSpeedElevator.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sPluses/_sPluses.pug
+include ../blocks/sComfortStart/_sComfortStart.pug
+include ../blocks/sHave/_sHave.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Умные  инвестиции  три-в-одном'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
-	+header()
-
-		+top-nav()
-		+topLine()  
-	+headerBlock()
-	+sContact()
+	header.header
+		+top-nav() 
+		+headerBlock()
+	+sFormula
+	+sSmaertInvest
+	+sSpeedElevator
+	+sWhy
+	+sPluses
+	+sComfortStart
+	+sHave
 	+sTrainingProgramm()
 	+sNuance()
 	+sForm()
