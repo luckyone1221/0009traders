@@ -1,7 +1,150 @@
+// start .sSuccess
+.sSuccess {
+	position: relative;
+	color: $white;
 
-	// start .sSuccess
-	.sSuccess {
-		 
+	padding: rem(30) 0;
+	@include media-breakpoint-up(sm){
+		padding: rem(50) 0;
+	}
+	@include media-breakpoint-up(lg){
+		padding: rem(73) 0 rem(70) 0;
+	}
+
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+	&__section-bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.section-title{
+
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(33px);
+		}
+		h2{
+			color: $white;
+		}
+	}
+
+	&__row{
+		@include roww(20px);
+
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(45);
+		}
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(65);
+		}
+
+	}
+	&__txt-col{
+		padding-bottom: rem(25);
+
+		@include media-breakpoint-up(lg){
+			padding-bottom: 0;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-top: 5px;
+		}
+		p{
+			font-size: rem(16px);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(sm){
+				font-size: rem(20px);
+				margin-bottom: rem(28);
+			}
+			line-height: 1.5;
+		}
+		p:last-child{
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+	}
+	&__txt-in-box{
+		border: 2px solid $white;
+
+		@include media-breakpoint-down(lg){
+			max-width: calc(100% - 30px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+
+		padding: rem(35);
+		@include media-breakpoint-up(sm){
+			padding: rem(35) rem(80);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: rem(35) rem(84) rem(36px) rem(80);
+
+			position: relative;
+			max-width: 460px;
+			right: -22px;
+		}
+
+		span{
+			font-weight: bold;
+			line-height: 1.5;
+
+			font-size: rem(16px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(20px);
+			}
+		}
+	}
+	&__headline{
+		font-weight: bold;
+		line-height: (38/30);
+		text-align: center;
+
+		font-size: rem(19px);
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			font-size: rem(30px);
+			margin-bottom: rem(46);
+		}
+
+	}
+	&__lower-txt{
+		line-height: 1.5;
+		text-align: center;
+
+		font-size: rem(16px);
+		margin-bottom: rem(25px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20px);
+			margin-bottom: rem(50px);
+		}
+	}
+	&__take-part-btn{
+		@extend .btn-cyan-frame;
+
+		margin-left: auto;
+		margin-right: auto;
+		width: 170px;
+		height: rem(48);
+		box-shadow: 0px 0px 20px rgba(39, 55, 206, 0.35), 0px 4px 80px rgba(58, 163, 193, 0.46);
+
+
+		font-weight: bold;
+		font-size: rem(20px);
+		line-height: (25/20);
+	}
+	&__{}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

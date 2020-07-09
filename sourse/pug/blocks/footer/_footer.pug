@@ -1,4 +1,35 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.row.row
+				.col-9.col-lg-5
+					+e.publisher-txt
+						p 2008—2020 © издательство Info-DVD.Ru
+						p
+							| Проект
+							|
+							a(href="#") «Инфоклуб»
+						p ОГРНИП 316183200118945
+					+e.NAV.menu
+						ul
+							li: a(href="#") партнёрская программа
+							li: a(href="#") политика конфиденциальности
+							li: a(href="#") предупреждение о рисках
+				+e.logo-col.col-3.col-lg-2
+					+e.logo-cont
+						img.lazy(src="#" data-src="img/@2x/footer-logo.png" alt="")
+				.col-lg-5
+					+e.support
+						+e.bold-txt Служба поддержки:
+						+e.inline-links
+							a(href='#') Задать свой вопрос
+							a(href='#') Частые вопросы и ответы на них
+					+e.callback
+						+e.bold-txt Позвоните нам:
+						+e.inline-links
+							a(href='#') 8 (800) 555-07-21
+							a(href='#') +7 (499) 553-09-74
+						+e.callback-txt
+								| или
+								|
+								a(href='#') и мы вам перезвоним

@@ -4,8 +4,8 @@ html {
 }
 
 .pixel-perfect {
-	top: -10992px;
-	//top: 0;
+	//top: -10992px;
+	top: 0;
 	@include a-cent(x);
 	display: block;
 	pointer-events: none;
@@ -26,7 +26,7 @@ html {
 	//!!
 	//!!
 	//!!
-	min-height: 20000px;
+	//min-height: 20000px;
 
 	font-size: 14px;
 	@include media-breakpoint-up(md){

@@ -1,9 +1,19 @@
 mixin sSuccess()
 	// start sSuccess
-	+b.SECTION.sSuccess.section#sSuccess&attributes(attributes)
+	+b.SECTION.sSuccess#sSuccess&attributes(attributes)
+		+e.section-bg
+			img.lazy(src="#" data-src="img/@2x/sSuccess-bg.jpg" alt='')
 		.container
-			+b.section-title.text-center
-				h2 sSuccess
-				
-			.row
+			+b.section-title
+				h2 Вы можете добиться финансового успеха!
+			+e.row.row
+				+e.txt-col.col-lg-7
+					p Это реально. Каждый человек может добиться финансового успеха.
+					p Для этого достаточно владеть основами финансовой грамотности и&nbsp;уметь заставлять накопленные деньги приносить Вам новые деньги.
+					p Далее магия сложного процента и&nbsp;время сделает свое дело.
+				+e.txt-in-box.col-lg-5
+					span Согласитесь, классно осознавать, что рано или поздно Ваши финансовые цели обязательно сбудутся
+			+e.H4.headline А&nbsp;сократить в&nbsp;разы срок достижения целей, Вам поможет тренинг &laquo;Умные инвестиции три-в-одном&raquo; и&nbsp;практические занятия в&nbsp;мастер-группе Романа Романовича.
+			+e.lower-txt Оставьте заявку на участие в тренинге прямо сейчас, жмите на кнопку:
+			+e.A.take-part-btn(href="#") Я участвую!
 	// end sSuccess

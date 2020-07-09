@@ -121,7 +121,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main-small-2.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -164,11 +164,11 @@ function eventHandler() {
 	}
 
 	window.addEventListener('resize', () => {
-		heightses();
+		//heightses();
 
 	});
 
-	heightses();
+	//heightses();
 
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {

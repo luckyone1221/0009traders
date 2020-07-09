@@ -119,7 +119,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main-small-2.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -152,10 +152,9 @@ function eventHandler() {
 		}
 	}
 
-	window.addEventListener('resize', function () {
-		heightses();
-	});
-	heightses(); // листалка по стр
+	window.addEventListener('resize', function () {//heightses();
+	}); //heightses();
+	// листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
