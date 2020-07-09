@@ -2,14 +2,12 @@
 
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
 		--sTPB: #{rem(40)};
 	}
-
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
+	--sPT: #{rem(70)};
+	--sPB: #{rem(70)};
+	--sTPB: #{rem(20)};
+ 
 }
 
 @include media-breakpoint-up(xl) {}

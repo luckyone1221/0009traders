@@ -1,31 +1,48 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
-
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+	@include media-breakpoint-up(sm) {
+	 padding-top: rem(24);
+	 padding-bottom: rem(24);
 	}
+	padding-top: rem(15);
+	padding-bottom: rem(15);
+	 position: relative;
+	 z-index: 4;
+	&__logo{
+			@include media-breakpoint-up(xl) {
 
+				margin-right: rem(30);
+			}
+	}
 	&__nav {
 		text-align: center;
-		list-style-type: none;
-	}
+		// list-style-type: none;
+		display: flex;
+			@include media-breakpoint-up(xl) {
 
+				@include roww(rem(50));
+			}
+			@include roww(rem(30));
+		margin-bottom: 0;
+	}
+	.row{
+		align-items: center;
+	}
 	&__item {
 		display: inline-block;
 		list-style-type: none;
+	}
+	&__link{
+		color: #ffffff !important;
+		border-bottom: 1px solid transparent;
+		&:hover{
+			border-color: #fff;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-outline-white;
+		width: rem(160);
 	}
 
 	// 

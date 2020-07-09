@@ -47,13 +47,17 @@ html {
 	h2{
 		font-weight: bold;
 
-		font-size: rem(21px);
-		@include media-breakpoint-up(sm){
-			font-size: rem(40px);
-		}
+		// font-size: rem(21px);
+		// @include media-breakpoint-up(sm){
+		// 	font-size: rem(40px);
+		// }
 
 		line-height: (50/40);
 		color: $primary;
+	}
+	&__text{
+		@extend .h5;
+		font-weight: bold;
 	}
 }
 
@@ -419,6 +423,10 @@ iframe {
 	height: 200px;
 	background-color: $primary;
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.btn{
+	font-weight: bold;
 }
 
 .btn-cyan-frame{
