@@ -13,10 +13,10 @@ mixin sTrainingProgramm()
 
 mixin block3in1(headlineTxt, displayClass='active')
 	+e.block
-		+e.block-header(class=displayClass)
+		+e.block-header.block-header-js(class=displayClass)
 			+e.headline=headlineTxt
 			+e.open-btn
-		+e.block-content(class=displayClass)
+		+e.block-content.block-content-js(class=displayClass)
 			+e.step
 				+e.step-container
 					+e.step-header
