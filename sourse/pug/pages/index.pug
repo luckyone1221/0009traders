@@ -5,6 +5,10 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 
 include ../blocks/sTrainingProgramm/_sTrainingProgramm.pug
+include ../blocks/sNuance/_sNuance.pug
+include ../blocks/sLifeAfter/_sLifeAfter.pug
+include ../blocks/sGreenLvl/_sGreenLvl.pug
+include ../blocks/sFAQ/_sFAQ.pug
 
 block variables
 	- let  mainPage= null
@@ -18,8 +22,12 @@ block pagecontent
 		+top-nav()
 		+topLine()  
 	+headerBlock()
-	+sForm()
 	+sContact()
 	+sTrainingProgramm()
+	+sNuance()
+	+sForm()
+	+sLifeAfter()
+	+sGreenLvl()
+	+sFAQ()
 	+footer()
 	

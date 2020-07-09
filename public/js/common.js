@@ -234,9 +234,9 @@ function eventHandler() {
 		}).fail(function () {});
 	}); //luckyoneJS
 
-	$('.sTrainingProgramm__block-header').click(function () {
+	$('.block-header-js').click(function () {
 		$(this).toggleClass('active');
-		$(this.parentElement).find('.sTrainingProgramm__block-content').slideToggle(function () {
+		$(this.parentElement).find('.block-content-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
 	}); //end luckyoneJS

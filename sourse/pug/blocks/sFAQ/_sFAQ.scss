@@ -1,0 +1,198 @@
+// start .sFAQ
+.sFAQ {
+	overflow: hidden;
+	position: relative;
+	background-color: $light;
+
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+
+	padding: rem(30px) 0;
+	@include media-breakpoint-up(xl){
+		padding: rem(63) 0 rem(120) 0;
+	}
+
+	.section-title{
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(66);
+		}
+		h2{
+			margin-bottom: 0;
+		}
+	}
+
+
+	&__section-bg{
+		position: absolute;
+		left: 0;
+
+		top: 50%;
+		transform: translateY(-50%);
+		@include media-breakpoint-up(xl){
+			transform: none;
+			top: rem(247);
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	//blocks-box
+	&__blocks-box{
+
+	}
+	&__block{
+		background: $white;
+		//box-shadow: 0px 0px 20px rgba(39, 55, 206, 0.15), 0px 4px 80px rgba(58, 163, 193, 0.2);
+		box-shadow: 0px 0px 20px rgba(39, 55, 206, 0.15), 0px 4px 80px rgba(58, 163, 193, 0.2);
+
+		margin-bottom: rem(24px);
+		&:last-child{
+			margin-bottom: rem(0);
+		}
+	}
+	&__block-header{
+		cursor: pointer;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+
+		padding: rem(15) rem(15) rem(15) rem(25);
+		@include media-breakpoint-up(sm){
+			padding: rem(22) rem(22) rem(25) rem(25);
+		}
+		//opened css
+		&.active{
+			.sFAQ__open-btn{
+				background-color: $white;
+
+				&:before{
+					background-color: $primary;
+				}
+				&:after{
+					background-color: transparent;
+				}
+			}
+		}
+
+		&:hover{
+			.sFAQ__open-btn{
+				box-shadow: 0 0 14px -5px lighten($primary, 10);
+			}
+		}
+	}
+	&__headline{
+		@extend .link-primary;
+		font-weight: bold;
+		line-height: (38/30);
+		color: $primary;
+
+		font-size: rem(18px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(25px);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(30px);
+		}
+	}
+	&__open-btn{
+		flex-shrink: 0;
+		margin-left: rem(40px);
+
+		width: rem(30px);
+		height: rem(30px);
+		@include media-breakpoint-up(sm){
+			width: rem(38px);
+			height: rem(38px);
+		}
+
+		border-radius: 50%;
+
+		border: 1px solid $primary;
+		background-color: $primary;
+		position: relative;
+
+		&:before, &:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			background-color: $white;
+		}
+
+		&:before{
+			width: rem(14px);
+			height: 1px;
+		}
+		&:after{
+			height: rem(14px);
+			width: 1px;
+		}
+	}
+	&__block-content{
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		padding: rem(5) rem(15) rem(15) rem(15);
+		@include media-breakpoint-up(sm){
+			padding: rem(10) rem(25) rem(25) rem(25);
+		}
+		@include media-breakpoint-up(lg){
+			padding: 6px rem(103) rem(27) rem(28);
+		}
+
+		p{
+			line-height: 1.5;
+
+			font-size: rem(16);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(sm){
+				font-size: rem(20px);
+			}
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(29);
+			}
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sFAQ
