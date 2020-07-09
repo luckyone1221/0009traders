@@ -1,15 +1,25 @@
 // start .sTrainingProgramm
 .sTrainingProgramm {
+	overflow: hidden;
 	position: relative;
 	background-color: $light;
 
+
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+
+	padding: rem(30px) 0;
 	@include media-breakpoint-up(xl){
-		padding-top: rem(63);
-		padding-bottom: rem(118);
+		padding: rem(63) 0 rem(118) 0;
 	}
 
 	.section-title{
-		padding-bottom: rem(61);
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(66);
+		}
 		h2{
 			margin-bottom: 0;
 		}
@@ -21,8 +31,9 @@
 		left: 0;
 
 		top: 50%;
-		transform: translateY(50%);
+		transform: translateY(-50%);
 		@include media-breakpoint-up(xl){
+			transform: translateY(50%);
 			top: rem(578);
 			transform: none;
 		}
@@ -38,18 +49,26 @@
 
 	}
 	&__block{
-		margin-bottom: rem(31);
-
 		background: $white;
 		box-shadow: 0px 0px 20px rgba(39, 55, 206, 0.15), 0px 4px 80px rgba(58, 163, 193, 0.2);
+
+		margin-bottom: rem(31);
+		&:last-child{
+			margin-bottom: rem(0);
+		}
 	}
 	&__block-header{
 		cursor: pointer;
-		padding: rem(22) rem(22) rem(25) rem(44);
 
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
+
+		padding: rem(15) rem(15) rem(15) rem(25);
+		@include media-breakpoint-up(sm){
+			padding: rem(22) rem(22) rem(25) rem(44);
+		}
 		//opened css
 		&.active{
 			.sTrainingProgramm__open-btn{
@@ -76,14 +95,22 @@
 		line-height: (38/30);
 		color: $primary;
 
-		font-size: rem(30px);
+		font-size: rem(18px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(30px);
+		}
 	}
 	&__open-btn{
 		flex-shrink: 0;
 		margin-left: rem(40px);
 
-		width: rem(38px);
-		height: rem(38px);
+		width: rem(30px);
+		height: rem(30px);
+		@include media-breakpoint-up(sm){
+			width: rem(38px);
+			height: rem(38px);
+		}
+
 		border-radius: 50%;
 
 		border: 1px solid $primary;
@@ -101,28 +128,129 @@
 		}
 
 		&:before{
-			width: 14px;
+			width: rem(14px);
 			height: 1px;
 		}
 		&:after{
-			height: 14px;
+			height: rem(14px);
 			width: 1px;
 		}
 	}
 
 	//content
+	&__step{
+		border-top: 1px solid rgba($primary, .1);
+
+		padding: rem(20px) rem(15) rem(20) rem(30);
+		@include media-breakpoint-up(sm){
+			padding: rem(20px) rem(30) rem(20) rem(60);
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(24px) rem(30) rem(15) rem(60);
+
+			&:last-child{
+				padding-bottom: rem(25);
+			}
+		}
+	}
+	&__step-container{
+		@include media-breakpoint-up(lg){
+			max-width: rem(870px);
+		}
+	}
+
 	&__block-content{
 		display: none;
 		&.active{
 			display: block;
 		}
-
-
 	}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+	&__step-header{
+		span:first-child{
+			color: $primary;
+		}
+		span{
+			font-weight: bold;
+			line-height: (25/20);
+
+			font-size: rem(16px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(20px);
+			}
+		}
+
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(17);
+		}
+	}
+	&__step-title{
+		line-height: 1.5;
+
+		font-size: rem(16);
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20px);
+			margin-bottom: rem(18);
+		}
+	}
+	&__step-format{
+		line-height: 1.5;
+
+		font-size: rem(16);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20px);
+			margin-bottom: rem(18);
+		}
+	}
+	&__step-list{
+		&.last-child-inline{
+			li:last-child{
+				b {
+					display: inline;
+				}
+			}
+		}
+
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li{
+			position: relative;
+			line-height: (24/16);
+
+
+			font-size: rem(14.5px);
+			margin-bottom: rem(20px);
+			padding-left: rem(30);
+			@include media-breakpoint-up(sm){
+				font-size: rem(16px);
+				margin-bottom: rem(24px);
+				padding-left: rem(36.75);
+			}
+
+			&:after{
+				content: '';
+				position: absolute;
+				left: rem(2.5px);
+				top: rem(10);
+
+				height: rem(3px);
+				width: rem(19.5px);
+				background: linear-gradient($primary,$purple);
+			}
+
+			b{
+				display: block;
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

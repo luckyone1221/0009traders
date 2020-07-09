@@ -4,7 +4,8 @@ html {
 }
 
 .pixel-perfect {
-	top: 0;
+	top: -10992px;
+	//top: 0;
 	@include a-cent(x);
 	display: block;
 	pointer-events: none;
@@ -14,11 +15,19 @@ html {
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 }
 
 body,
 html {
+	//!!
+	//!!
+	//!!
+	//!!
+	//!!
+	//!!
+	min-height: 20000px;
+
 	font-size: 14px;
 	@include media-breakpoint-up(md){
 		font-size: $em-base;
@@ -37,7 +46,12 @@ html {
 	padding-bottom: var(--sTPB);
 	h2{
 		font-weight: bold;
-		font-size: rem(40px);
+
+		font-size: rem(21px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(40px);
+		}
+
 		line-height: (50/40);
 		color: $primary;
 	}
@@ -405,4 +419,23 @@ iframe {
 	height: 200px;
 	background-color: $primary;
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.btn-cyan-frame{
+	@extend .btn;
+	@extend .btn-info;
+
+	@include mt();
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	box-shadow: 0px 0px 20px rgba(39, 55, 206, 0.35), 0px 4px 80px rgba(58, 163, 193, 0.46);
+
+
+	font-weight: bold;
+	font-size: rem(16px);
+	line-height: (20/16);
+	color: $white;
 }
