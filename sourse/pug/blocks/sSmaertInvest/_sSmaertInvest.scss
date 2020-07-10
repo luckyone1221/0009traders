@@ -1,7 +1,58 @@
 
 	// start .sSmaertInvest
 	.sSmaertInvest {
-		 
+		background: 
+		url(../img/@2x/smart-bg.jpg),
+				linear-gradient(149.79deg, #2737CE 31.5%, #4C0A81 83.94%);
+		@include bgs;
+		color: #ffffff;
+		position: relative;
+		z-index: 4;
+		&::after,
+		&::before{
+			content: '';
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+		@include media-breakpoint-up(xl) {
+		&::after{
+			
+			width: rem(402.12px);
+			height: rem(464.39px);
+			top: rem(-126);
+			right: rem(-60);
+
+				background-image: url(../img/smart-top.svg);
+			}
+			&::before{
+				
+			width: rem(466px);
+			height: rem(451.39px);
+			bottom: rem(-164);
+			// right: 0;
+			left: rem(-60);
+			background-image: url(../img/smart-down.svg);
+			z-index: -1;
+		}
+	}
+		h2{
+			color: #3aa3c1;
+		}
+		.h5{
+				@include media-breakpoint-up(xl) {
+
+					margin-bottom: rem(37);
+				}
+		}
+		 ul{
+			 margin-left: rem(20);
+			 margin-bottom: rem(65);
+		 }
+		 &__btn{
+			 @extend .btn-cyan-frame;
+			 max-width: rem(340);
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

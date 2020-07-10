@@ -63,6 +63,7 @@ $theme-colors: ("primary": $primary,
   "success": $success,
   "info": $info,
   "warning": $warning,
+  "white": $white,
   "danger": $danger,
   "light": $light,
   "dark": $dark) !default;
@@ -317,8 +318,8 @@ $container-padding-x: $grid-gutter-width / 2 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: .25rem !default;
-$border-radius-sm: .2rem !default;
+$border-radius: rem(4) !default;
+$border-radius-sm: rem(4) !default;
 $border-radius-lg: .3rem !default;
 
 $rounded-pill: 50rem !default;
@@ -402,8 +403,8 @@ $line-height-lg: 2 !default;
 $h1-font-size: rem(50) !default;
 $h2-font-size: rem(40) !default;
 $h3-font-size: rem(30) !default;
-$h4-font-size: rem(30) !default;
-$h5-font-size: $font-size-base * 1.25 !default;
+$h4-font-size: rem(25) !default;
+$h5-font-size: rem(20) !default;
 $h6-font-size: $font-size-base !default;
 
 $headings-margin-bottom: $spacer / 2 !default;
@@ -516,8 +517,8 @@ $table-variants: ("primary": color-level($primary, $table-bg-level),
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: .375rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-y: .816rem !default;
+$input-btn-padding-x: .6rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
@@ -527,9 +528,9 @@ $input-btn-focus-color-opacity: .25 !default;
 $input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: .25rem !default;
+$input-btn-padding-y-sm: .438rem !default;
 $input-btn-padding-x-sm: .5rem !default;
-$input-btn-font-size-sm: $font-size-sm !default;
+$input-btn-font-size-sm: $font-size-base !default;
 
 $input-btn-padding-y-lg: .5rem !default;
 $input-btn-padding-x-lg: 1rem !default;

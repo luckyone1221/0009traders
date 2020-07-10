@@ -1,10 +1,16 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock#headerBlock&attributes(attributes)
+		block
+		+e.container.container
+			+e.caption
+				h1 Умные  инвестиции  три-в-одном
+				+e.title-sub Ваши деньги:
+				ul
+					li защищены от&nbsp;кризисов
+					li умножаются с&nbsp;течением времени
+					li приносят пассивный доход
+				+pic('head-img.png','','')
+				+e.btn(href="#") Принять участие в тренинге
+		 
 	// end headerBlock

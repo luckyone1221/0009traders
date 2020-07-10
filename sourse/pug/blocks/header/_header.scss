@@ -1,8 +1,43 @@
 
 	// start .header
 	.header {
-		 background: linear-gradient(139.72deg, #2636CA -1.13%, #4C0980 65.92%);
+		 background:url(../img/@2x/head-bg.jpg), linear-gradient(139.72deg, #2636CA -1.13%, #4C0980 65.92%);
+		 	// background-image: ;
+		 	@include bgs;
 		 color: #ffffff;
+		 position: relative;
+	 
+		 z-index: 2;
+		 &::after{
+			 content: '';
+			 position: absolute;
+			 	@include media-breakpoint-up(sm){
+
+					 width: rem(1800);
+					 height: rem(812);
+					 bottom: rem(-216);
+					top: auto;
+					}
+						@include media-breakpoint-up(sm) {
+
+							bottom: rem(-216 / 2);
+						}
+						top: 100px;
+					width: rem(1800 / 2);
+					height: rem(812 / 2);
+			 background-image: url(../img/head-after.svg);
+			 background-repeat: no-repeat;
+			 background-size: 100% 100%;
+			 	@include media-breakpoint-up(xl) {
+
+					 left: 50px;
+					 right: auto;
+					}
+					right: -30%;
+					// left: -300px;
+					// right: -250px;
+			 z-index: -1;
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
