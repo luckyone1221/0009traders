@@ -119,7 +119,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main-small.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -238,6 +238,26 @@ function eventHandler() {
 		$(this.parentElement).find('.block-content-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
+	}); //
+
+	var studentsSlider = new Swiper('.students-slider-js', {
+		slidesPerView: 1,
+		loop: true,
+		//nav
+		navigation: {
+			nextEl: '.master-slider-next',
+			prevEl: '.master-slider-prev'
+		},
+		//pugin
+		pagination: {
+			el: $(this).find('.master-sl-pugin'),
+			clickable: true
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true //loadPrevNextAmount: 2,
+
+		}
 	}); //end luckyoneJS
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;

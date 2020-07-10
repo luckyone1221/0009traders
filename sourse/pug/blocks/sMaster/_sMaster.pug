@@ -5,7 +5,7 @@ mixin sMaster()
 			img.lazy(src='#' data-src="img/@2x/sMaster-bg.jpg" alt="")
 		.container
 			.row
-				.col-lg-5
+				.col-md-7.col-lg-5
 					+b.section-title
 						h2 Кто будет Вашим наставником?
 					+e.top-description
@@ -13,18 +13,18 @@ mixin sMaster()
 						p Роман Романович&nbsp;&mdash; заслуженный автор Инфо-ДВД. Его тренинги всегда получают наивысшие оценки от&nbsp;учеников.
 					+e.H4.blue-txt Роман Романович&nbsp;&mdash; сертифицированный специалист в&nbsp;области финансовых рынков
 			+e.row.row
-				.col-4
+				.grad-col.col-12.col-lg-4
 					p Консультант-методист Министерства финансов Российской Федерации
-				.col-4
+				.grad-col.col-12.col-lg-4
 					p Обладает двумя аттестатами Федеральной службы по&nbsp;финансовым рынкам Российской Федерации (1.0&nbsp;&mdash; брокерская и&nbsp;дилерская деятельность и&nbsp;управление ценными бумагами, 5.0&nbsp;&mdash; управление инвестиционными фондами, паевыми инвестиционными фондами и&nbsp;негосударственными пенсионными фондами
-				.col-4
+				.grad-col.col-12.col-lg-4
 					p Владеет сертификатом независимого финансового советника от&nbsp;Института финансового планирования (Москва)
 			+e.certificats-row.row
 				+certificatItem(1)
 				+certificatItem(1)
 				+certificatItem(2)
 				+certificatItem(3)
-			+e.profile-row.row
+			+b.profile-row.row
 				+e.profile-txt-col.col-lg-7
 					+e.profile-headline Роман Романович имеет опыт управления активами во&nbsp;время кризиса
 					p В&nbsp;2014 году Роман управлял клиентским портфелем российских облигаций, цены на&nbsp;которые рухнули из-за первых западных санкций. Убытки удалось свести к&nbsp;нулю, просадки по&nbsp;портфелю не&nbsp;было совсем и&nbsp;деньги клиентов продолжили свой рост.
@@ -32,11 +32,11 @@ mixin sMaster()
 				+e.photo-col.col-lg-5
 					+e.photo
 						img.lazy(src="#" data-src="img/@2x/master-foto-1.jpg" alt="")
-			+e.profile-row.row.reverse-profile-row
+			+b.profile-row.row.reverse-profile-row
 				+e.photo-col.col-lg-5
 					+e.photo
 						img.lazy(src="#" data-src="img/@2x/master-foto-2.jpg" alt="")
-				+e.profile-txt-col.col-lg-7.order-1.order-lg-0
+				+e.profile-txt-col.col-lg-7
 					+e.profile-headline Роман Романович&nbsp;&mdash; талантливый преподаватель
 					p Далеко не&nbsp;каждый, кто умеет торговать на&nbsp;рынке, способен передать свои знания другим. Но&nbsp;к&nbsp;Роману это не&nbsp;относится. Самые сложные вещи он&nbsp;объясняет просто, интересно и&nbsp;доходчиво. Недаром он&nbsp;частый гость на&nbsp;телевидении, выступает на&nbsp;различных конференциях и&nbsp;дает комментарии для деловых изданий.
 					p За&nbsp;плечами у&nbsp;Романа&nbsp;&mdash; почти десятилетний опыт обучения и&nbsp;консультирования, а&nbsp;также три года преподавательской деятельности в&nbsp;Высшей школе бизнеса Томского государственного университета, где он&nbsp;преподавал дисциплину &laquo;Оценка ценных бумаг и&nbsp;фондовые рынки&raquo;.
@@ -44,34 +44,37 @@ mixin sMaster()
 				p Лучше всего о&nbsp;педагогическом таланте Романа расскажут его ученики.
 				+e.preslider-headline Отзывы учеников, прошедших тренинги Романа Романовича в&nbsp;Инфо-ДВД:
 			+b.master-slider
-				.master-slider-prev
+				.master-slider-prev.d-none.d-md-flex
 					+icon('chevron-left')
-				.master-slider-next
+				.master-slider-next.d-none.d-md-flex
 					+icon('chevron-right')
-				.swiper-container.students-slider
+				.swiper-container.students-slider-js
 					.swiper-wrapper
-						+studentsSlider()
-				.swiper-pugin
+						- for (let i=1; i < 6; i++){
+							.swiper-slide
+								img.swiper-lazy(src="#" data-src=`img/@2x/master-slide-${i}.png` alt="")
+						- }
+				.master-sl-pugin
 	// end sMaster
 
-mixin studentsSlider()
-	.swiper-slide
-		+e.slide-img-block
-			+e.img-cont
-				img.swiper-lazy(src='#' data-src="img/@2x/sMaster-slide-1.jpg" alt='')
-			+e.name-block
-				+e.rank-img.swiper-lazy(src='#' data-src="img/@2x/3ple-rank.jpg" alt='#')
-				+e.name-txt Александр Каневский
-			+e.rank-name(style="background-color: #9870b9;") эксперт
-		+e.slide-txt
-			| 1. Прежде всего, огромное спасибо Роману Романовичу за&nbsp;проведенный курс. Он &lsquo;был очень информативным, практически направленным &sbquo; весьма актуальным по тематике, заслуживающим много других характеристик в&nbsp;превосходной степени&nbsp;и, что не&nbsp;менее важно,&nbsp;&mdash; практически ориентированным на&nbsp;потребности учащихся. В. курсе были даны реальные инструменты для успешного их&nbsp;использования Пользуясь известным слоганом я&nbsp;мог&nbsp;бы оценить значение курса для меня в&nbsp;том, ЧТО &laquo;Я&nbsp;ОКАЗАЛСЯ В&nbsp;НУЖНОМ МЕСТЕ В&nbsp;НУЖНОЕ ВРЕМЯ&raquo;
-			|
-			| Дело в&nbsp;том, что в&nbsp;целях возможности диверсификации бизнес-активности я&nbsp;прошел достаточное количество разных курсов. В&nbsp;основном &sbquo; они были полезными, проводились известными квалифицированными преподавателями, по&nbsp;завершении &lsquo;было получено много полезной информации, но&nbsp;я&nbsp;затруднялся сказал себе, что это. именно&nbsp;то, что я&nbsp;искал. Поэтому у&nbsp;меня есть с&nbsp;чем сравнивать.
-			|
-			| Важна также и&nbsp;манера изложения Романом материала&nbsp;&mdash; спокойная &sbquo; без лишних эмоций, которыми часто сопровождается та&nbsp;или иная информация об&nbsp;активностью на&nbsp;биржах
+	//-mixin studentsSlide()
+		.swiper-slide
+			+e.slide-img-block
+				+e.img-cont
+					img.swiper-lazy(src='#' data-src="img/@2x/sMaster-slide-1.jpg" alt='')
+				+e.name-block
+					+e.rank-img.swiper-lazy(src='#' data-src="img/@2x/3ple-rank.jpg" alt='#')
+					+e.name-txt Александр Каневский
+				+e.rank-name(style="background-color: #9870b9;") эксперт
+			+e.slide-txt
+				| 1. Прежде всего, огромное спасибо Роману Романовичу за&nbsp;проведенный курс. Он &lsquo;был очень информативным, практически направленным &sbquo; весьма актуальным по тематике, заслуживающим много других характеристик в&nbsp;превосходной степени&nbsp;и, что не&nbsp;менее важно,&nbsp;&mdash; практически ориентированным на&nbsp;потребности учащихся. В. курсе были даны реальные инструменты для успешного их&nbsp;использования Пользуясь известным слоганом я&nbsp;мог&nbsp;бы оценить значение курса для меня в&nbsp;том, ЧТО &laquo;Я&nbsp;ОКАЗАЛСЯ В&nbsp;НУЖНОМ МЕСТЕ В&nbsp;НУЖНОЕ ВРЕМЯ&raquo;
+				|
+				| Дело в&nbsp;том, что в&nbsp;целях возможности диверсификации бизнес-активности я&nbsp;прошел достаточное количество разных курсов. В&nbsp;основном &sbquo; они были полезными, проводились известными квалифицированными преподавателями, по&nbsp;завершении &lsquo;было получено много полезной информации, но&nbsp;я&nbsp;затруднялся сказал себе, что это. именно&nbsp;то, что я&nbsp;искал. Поэтому у&nbsp;меня есть с&nbsp;чем сравнивать.
+				|
+				| Важна также и&nbsp;манера изложения Романом материала&nbsp;&mdash; спокойная &sbquo; без лишних эмоций, которыми часто сопровождается та&nbsp;или иная информация об&nbsp;активностью на&nbsp;биржах
 
 
 mixin certificatItem(imgNum)
-	.col-sm-6.col-lg-3
+	+e.certificat-col.col-6.col-sm-6.col-lg-3
 		+e.A.certificat-img(href=`img/@2x/cert-${imgNum}.jpg` data-fancybox="ceftificatsGroup")
 			img.lazy(src="#" data-src=`img/@2x/cert-${imgNum}.jpg` alt="")
