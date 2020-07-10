@@ -121,7 +121,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main-small.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -271,6 +271,29 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 
+	});
+
+	//
+	let studentsSlider = new Swiper('.students-slider-js', {
+		slidesPerView: 1,
+		loop: true,
+
+		//nav
+		navigation: {
+			nextEl: '.master-slider-next',
+			prevEl: '.master-slider-prev',
+		},
+
+		//pugin
+		pagination: {
+			el: $(this).find('.master-sl-pugin'),
+			clickable: true,
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			//loadPrevNextAmount: 2,
+		},
 	});
 
 	//end luckyoneJS
