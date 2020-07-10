@@ -1,6 +1,66 @@
 
 	// start .sWhy
 	.sWhy {
+		.row{
+			@include roww(rem(42))
+		}
+		&__col{
+			margin-bottom: rem(32);
+			min-height: 196px;
+			&:nth-child(1) img{
+				right: rem(25);
+			}
+			
+			&:nth-child(2) img{
+				right: 0;
+			}
+			&:nth-child(3){
+				min-height: rem(280px);
+				img{
+					left: rem(74);
+				}
+			}
+			&:nth-child(4) img{
+			 left: 0;
+			}
+
+		}
+		&__item{
+			min-height: 100%;
+			color: #ffffff;
+			z-index: 2;
+			padding: rem(22) rem(30) rem(37);
+			@include media-breakpoint-up(sm) {
+
+				display: flex;
+			}
+			background: linear-gradient(149.15deg, #2737CE 31.5%, #4C0A81 83.94%);
+ 
+			position: relative;
+			z-index: 2;
+			img{
+				z-index: -1;
+				position: absolute;
+				bottom: 0;
+				mix-blend-mode: multiply;
+				max-height: 90%;
+			}
+		}
+		li{
+			list-style: none;
+			margin-bottom: 0.5rem;
+			max-width: rem(320);
+			position: relative;
+			z-index: 2;
+		}
+		&__title{
+			@extend .h5;
+			font-weight: bold;
+			margin-right: rem(34);
+			max-width: rem(132);
+			position: relative;
+			z-index: 2;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

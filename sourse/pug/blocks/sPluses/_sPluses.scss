@@ -1,7 +1,37 @@
 
 	// start .sPluses
 	.sPluses {
-		 
+		padding-top: 0;
+		h2{
+			@extend .h3;
+			font-weight: bold;
+		}
+		 	&__item {
+		 		max-width: rem(270);
+		 		margin-bottom: rem(75);
+
+		 		img {
+					 
+					 max-height: 100%;
+					}
+				}
+				&__img-wrap{
+					min-height: rem(80);
+					 margin-bottom: rem(33);
+			 }
+		 	&__title {
+		 		@extend .h5;
+		 		color: $primary;
+		 		font-weight: bold;
+		 		line-height: (25 / 20);
+		 		margin-bottom: rem(15);
+			 }
+			 &__btn{
+				 @extend .btn-cyan-frame;
+				 max-width: rem(442);
+				 margin-left: auto;
+				 margin-right: auto;
+			 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

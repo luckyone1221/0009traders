@@ -2,8 +2,30 @@ mixin sWhy()
 	// start sWhy
 	+b.SECTION.sWhy.section#sWhy&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sWhy
+			+b.section-title
+				h2 Умные инвестиции три-в-одном
+				+e.text Где, как и&nbsp;с&nbsp;чем&nbsp;Вы будете работать?
 				
 			.row
+				mixin item(i,t)
+					+e.col.col-lg-6
+						+e.item
+							+e.title= t
+							ul
+								block
+							+pic(`sWhy-${i}.png`,'','lazy',0)
+							//- img(src="", alt="")
+				+item('1','Рынки: ','')
+					li Фондовые  <br> биржи США
+				+item('2','Инструменты:','')
+					li Акции, недооцененные рынком
+					li Акции Penny Stock
+					li Дивидендные акции
+					li Защитные активы
+				+item('3','Инструмент принятия решений:','')
+					li Фундаментальный анализ по экспресс-методике Романа Романовича
+				+item('4','Брокеры:','')
+					li Европейские и&nbsp;американские брокеры с&nbsp;прямым доступам к&nbsp;торгам на&nbsp;биржах США
+					li Российские брокеры с&nbsp;доступом к&nbsp;американским акциям на&nbsp;Санкт-Петербургской бирже
+					li Российские брокеры с&nbsp;прямым доступам к&nbsp;торгам на&nbsp;биржах США (только для квалифицированных инвесторов)
 	// end sWhy

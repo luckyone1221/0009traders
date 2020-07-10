@@ -1,6 +1,43 @@
 
 	// start .sComfortStart
 	.sComfortStart {
+		.row{
+			@include roww(rem(40));
+		}
+		&__col{
+			margin-bottom: rem(40);
+		}
+		&__item{
+				@include media-breakpoint-up(sm) {
+
+					padding: rem(27) rem(35) rem(40);
+				}
+				padding: rem(27) rem(15) rem(40);
+			display: flex;
+			flex-direction: column;
+			background: #F7F7FF;
+			min-height: 100%;
+		}
+
+			&__title {
+				@extend .h5; 
+				font-weight: bold;
+				line-height: (25 / 20);
+				margin-bottom: rem(25);
+			}
+
+			&__btn {
+				@extend .btn-cyan-frame;
+				width: 100%;
+				margin-top: auto;
+				max-width: rem(378);
+				// margin-left: auto;
+				// margin-right: auto;
+			}
+			li{
+				list-style: none;
+				margin-bottom: 1rem;
+			}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
