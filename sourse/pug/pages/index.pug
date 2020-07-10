@@ -4,13 +4,15 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 
-	//
+	//lucky
+include ../blocks/sMaster/_sMaster.pug
 include ../blocks/sTrainingProgramm/_sTrainingProgramm.pug
 include ../blocks/sNuance/_sNuance.pug
 include ../blocks/sLifeAfter/_sLifeAfter.pug
 include ../blocks/sGreenLvl/_sGreenLvl.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sSuccess/_sSuccess.pug
+
 	//
 include ../blocks/sFormula/_sFormula.pug
 include ../blocks/sSmaertInvest/_sSmaertInvest.pug
@@ -37,6 +39,7 @@ block pagecontent
 	+sPluses
 	+sComfortStart
 	+sHave
+	+sMaster()
 	+sTrainingProgramm()
 	+sNuance()
 	+sForm()
