@@ -21,6 +21,10 @@ include ../blocks/sWhy/_sWhy.pug
 include ../blocks/sPluses/_sPluses.pug
 include ../blocks/sComfortStart/_sComfortStart.pug
 include ../blocks/sHave/_sHave.pug
+include ../blocks/sTariffs/_sTariffs.pug
+include ../blocks/sRecommended/_sRecommended.pug
+include ../blocks/sSuper/_sSuper.pug
+include ../blocks/sQuestions/_sQuestions.pug
 
 block variables
 	- let  mainPage= null
@@ -29,23 +33,12 @@ block title
 	title= title
 block pagecontent 
 	+mob-mnu()
-	header.header.header--main
-		+headerBlock()
+	header.header
+		//- +headerBlock()
+		+sTariffs
 			+top-nav()
-	+sFormula
-	+sSmaertInvest
-	+sSpeedElevator
-	+sWhy
-	+sPluses
-	+sComfortStart
-	+sHave
-	+sMaster()
-	+sTrainingProgramm()
-	+sNuance()
-	+sForm()
-	+sLifeAfter()
-	+sGreenLvl()
-	+sFAQ()
-	+sSuccess()
+	+sRecommended
+	+sSuper
+	+sQuestions
 	+footer()
 	
