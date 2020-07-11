@@ -243,6 +243,7 @@ function eventHandler() {
 	function tikTak(parentQselector) {
 		//html elements
 		var parent = document.querySelector(parentQselector);
+		if (!parent) return;
 		var days = parent.querySelector('.days');
 		var hours = parent.querySelector('.hours');
 		var minutes = parent.querySelector('.minutes');

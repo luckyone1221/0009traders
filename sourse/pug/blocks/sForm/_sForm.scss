@@ -157,31 +157,61 @@
 		}
 	}
 	//form
-	&__form-cont{
-		position: relative;
-		background: $white;
-		border-radius: 4px;
 
-		margin-bottom: rem(15);
-		padding: rem(20);
-		@include media-breakpoint-up(md){
-			padding: rem(30);
-			margin-bottom: rem(22);
-		}
 
-		@include media-breakpoint-up(lg){
-			display: flex;
-			justify-content: space-between;
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
 
-			flex-wrap: nowrap;
-			padding: 0 rem(40);
-		}
+} // end.sForm
 
-		@include media-breakpoint-up(xxl){
-			padding: 0 rem(58px) 0 rem(59px);
-		}
+//form
+.form-cont{
+	position: relative;
+	background: $white;
+	border-radius: 4px;
+
+	margin-bottom: rem(15);
+	padding: rem(20);
+	@include media-breakpoint-up(md){
+		padding: rem(30);
+		margin-bottom: rem(22);
 	}
+
+	@include media-breakpoint-up(lg){
+		display: flex;
+		justify-content: space-between;
+
+		flex-wrap: nowrap;
+		padding: 0 rem(40);
+	}
+
+	@include media-breakpoint-up(xxl){
+		padding: 0 rem(58px) 0 rem(59px);
+	}
+	//
 	&__form-txt{
+		color: $body-color;
 		font-weight: bold;
 		line-height: (38/30);
 
@@ -194,6 +224,8 @@
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
+		font-size: rem(20px);
+
 		@include media-breakpoint-up(lg){
 			text-align: left;
 			margin-left: 0;
@@ -208,6 +240,24 @@
 			font-size: rem(30px);
 			max-width: 305px;
 		}
+
+		p{
+			padding-top: rem(15);
+			line-height: (20/16);
+			color: $body-color;
+
+			margin-bottom: 0;
+			font-size: rem(14px);
+			@include media-breakpoint-up(lg){
+				max-width: 240px;
+				font-size: rem(15px);
+			}
+			@include media-breakpoint-up(xl){
+				max-width: 100%;
+				font-size: rem(16px);
+			}
+		}
+
 	}
 	&__man-img{
 		display: none;
@@ -270,51 +320,30 @@
 		&__{}
 		&__{}
 	}
-	&__polite{
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 15/12;
-		text-align: center;
-		color: $white;
+
+}
+
+.polite{
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15/12;
+	text-align: center;
+	color: $white;
+	opacity: 0.5;
+
+	a{
+		text-decoration: underline;
+		color: $white !important;
 		opacity: 0.5;
+		@include mt();
 
-		a{
-			text-decoration: underline;
-			color: $white !important;
-			opacity: 0.5;
-			@include mt();
-
-			&:hover{
-				opacity: 1;
-			}
+		&:hover{
+			opacity: 1;
 		}
 	}
+}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
 
-} // end.sForm
 
 .form-wrap{
 	&__input-wrap{
