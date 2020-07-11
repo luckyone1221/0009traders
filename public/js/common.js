@@ -119,7 +119,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/frame2.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -238,7 +238,61 @@ function eventHandler() {
 		$(this.parentElement).find('.block-content-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
-	}); //
+	}); //timer
+
+	function tikTak(parentQselector) {
+		//html elements
+		var parent = document.querySelector(parentQselector);
+		var days = parent.querySelector('.days');
+		var hours = parent.querySelector('.hours');
+		var minutes = parent.querySelector('.minutes');
+		var seconds = parent.querySelector('.seconds'); //date elements
+
+		var now = new Date(); // d === days.innerHtml + now.getDate... others the same way
+
+		var d = getTime(days, now.getDate());
+		var h = getTime(hours, now.getHours());
+		var m = getTime(minutes, now.getMinutes());
+		var s = getTime(seconds, now.getSeconds());
+		var targetDate = new Date(now.getFullYear(), now.getMonth(), d, h, m, s); //interval
+
+		tikTakReadOut(parent, targetDate, ThisReadOutID, days, hours, minutes, seconds);
+		var ThisReadOutID = window.setInterval(tikTakReadOut.bind(null, parent, targetDate, ThisReadOutID, days, hours, minutes, seconds), 1000);
+	}
+
+	tikTak('.timer-box-js'); //additional funcs to tikTak
+
+	function tikTakReadOut(parent, targetDate, ReadOutID, days, hours, minutes, seconds) {
+		var now = new Date();
+		var timeLeft = (targetDate - now) / 1000;
+
+		if (timeLeft < 1) {
+			window.clearInterval(ReadOutID); //to do something after timer ends
+
+			$(parent).fadeOut();
+		}
+
+		days.innerHTML = Math.floor(timeLeft / 60 / 60 / 24);
+		timeLeft = (timeLeft / 60 / 60 / 24 - Math.floor(timeLeft / 60 / 60 / 24)) * 60 * 60 * 24;
+		hours.innerHTML = Math.floor(timeLeft / 60 / 60);
+		timeLeft = (timeLeft / 60 / 60 - Math.floor(timeLeft / 60 / 60)) * 60 * 60;
+		minutes.innerHTML = Math.floor(timeLeft / 60);
+		timeLeft = (timeLeft / 60 - Math.floor(timeLeft / 60)) * 60;
+		seconds.innerHTML = Math.floor(timeLeft);
+	}
+
+	function getTime(htmlEl, currentTimeItem) {
+		var timeItem = Number(htmlEl.innerHTML);
+
+		if (timeItem) {
+			timeItem += currentTimeItem;
+		} else {
+			timeItem = currentTimeItem;
+		}
+
+		return timeItem;
+	} //
+
 
 	var studentsSlider = new Swiper('.students-slider-js', {
 		slidesPerView: 1,

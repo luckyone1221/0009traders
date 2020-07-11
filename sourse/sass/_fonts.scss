@@ -1,8 +1,15 @@
 $default-font: "PT Root UI";
+$gotham-pro: "GothamPro";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2 woff;
 
+
+//GothamPro
+@include font-face ($gotham-pro, $addr + "GothamPro/GothamPro", $file-formats: $file-format);
+
+//default font
+@include font-face ($default-font, $addr + "PTRootUI-Light/PTRootUI-Light", 300, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "PTRootUI-Regular/PTRootUI-Regular", $file-formats: $file-format);
 @include font-face ($default-font, $addr + "PTRootUI-Bold/PTRootUI-Bold", bold, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "PTRootUI-Medium/PTRootUI-Medium", 500, $file-formats: $file-format);

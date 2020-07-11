@@ -1,10 +1,60 @@
 mixin sTariffs()
 	// start sTariffs
-	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
+	+b.SECTION.sTariffs#sTariffs&attributes(attributes)
 		block
-		.container
-			+b.section-title.text-center
-				h2 sTariffs
-				
-			.row
+		+e.page-cont.container
+			+b.section-title
+				h2 А теперь выберите удобный тариф участия
+				p и приступайте к обучению сразу после оплаты!
+			+e.table-row.row
+				+priceTableHeader('Эконом', 'Мастер', 'VIP')
+				+priceTableLine('Основная программа тренинга (блоки 1 и 2)')
+				+priceTableLine('Безлимитный доступ к записям занятий тренинга')
+				+priceTableLine('Методические пособия, чеклисты и др. раздаточные материалы')
+				+priceTableLine('Мастер-группа Романа Романовича', '' , '3 месяца' ,'3 месяца')
+				+priceTableLine('Продление участия в мастер-группе', '' , 'Бесплатно*' ,'Бесплатно*')
+				+priceTableLine('Бонус. Видеокурс для начинающих «Инвестпортфель за 7 часов»')
+				+priceTableLine('Бонус. Видеокурс «Пенсионный портфель на ETF»')
+				+strokedLine('Базовая стоимость тарифа', '24 000' , '32 000' ,'120 000')
+				+priceTableLine('Стоимость со скидкой только сегодня', '18 000' , '26 000' ,'80 000')
+				+priceTableFooter('Выбрать Эконом', 'Выбрать Мастер', 'Выбрать VIP')
+			+e.timer-row.row
+				.col-lg-5
+					+e.timer-headline Успейте зафиксировать текущую скидку
+					+e.timer-txt Стоимость участия повысится через:
+				.col
+					+e.timer-box.timer-box-js
+						span.days 12
+						span.hours 20
+						span.minutes 20
+						span.seconds 20
+			+e.lower-txt *Бесплатное продление участия доступно ежемесячно при условии предоставления отчета о совершенных сделках.
+
 	// end sTariffs
+
+mixin priceTableHeader(base='base',master='master', VIP='VIP')
+	+e.item-txt-col.col-6.header-txt-col
+	+e.val-col.col-2.base-col.header-col=base
+	+e.val-col.col-2.master-col.header-col.active=master
+	+e.val-col.col-2.vip-col.header-col=VIP
+
+mixin priceTableLine(headline='headline', base='+',master='+', VIP='+')
+	+e.item-txt-col.col-6=headline
+	+e.val-col.col-2=base
+	+e.val-col.col-2=master
+	+e.val-col.col-2=VIP
+
+mixin strokedLine(headline='headline', base='+',master='+', VIP='+')
+	+e.item-txt-col.col-6=headline
+	+e.val-col.col-2.stroked=base
+	+e.val-col.col-2.stroked=master
+	+e.val-col.col-2.stroked=VIP
+
+mixin priceTableFooter(base='base',master='master', VIP='VIP')
+	+e.item-txt-col.col-6.footer-txt-col
+	+e.val-col.col-2.footer-col
+		+e.A.chose-btn(href="#")=base
+	+e.val-col.col-2.footer-col
+		+e.A.chose-btn(href="#")=master
+	+e.val-col.col-2.footer-col
+		+e.A.chose-btn(href="#")=VIP

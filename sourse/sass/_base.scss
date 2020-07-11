@@ -4,8 +4,8 @@ html {
 }
 
 .pixel-perfect {
-	top: -13px;
-	//top: 0;
+	//top: -13px;
+	top: 0;
 	@include a-cent(x);
 	display: block;
 	pointer-events: none;

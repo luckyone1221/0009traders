@@ -1,9 +1,29 @@
 mixin sQuestions()
 	// start sQuestions
 	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
+		+e.section-bg
+			img.lazy(src="#" data-src="img/@2x/sQuestions-bg.jpg" alt="")
 		.container
 			+b.section-title.text-center
-				h2 sQuestions
-				
-			.row
+				h2 Есть вопросы и нужна консультация?
+				p Мы готовы перезвонить Вам и ответить на любые вопросы:
+			+e.row.row
+				+questionItem(1)
+					| по программе
+					br
+					| тренинга
+				+questionItem(2)
+					| по техническим
+					|
+					br
+					| моментам
+				+questionItem(3)
+					| по вопросам оплаты
+					br
+					| и участия
 	// end sQuestions
+
+mixin questionItem(imgNum)
+	+e.question-col.col-md-4
+		+e.img
+			img.lazy(src='#' data-src="" alt)

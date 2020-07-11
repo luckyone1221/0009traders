@@ -1,9 +1,21 @@
 mixin sSuper()
 	// start sSuper
-	+b.SECTION.sSuper.section#sSuper&attributes(attributes)
+	+b.SECTION.sSuper#sSuper&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sSuper
-				
-			.row
+			+b.section-title
+				h2
+					span Супер-предложение!
+					| Бесплатное продление участия в мастер-группе Романа Романовича
+			+e.row.row
+				+e.txt-col.col
+					p Заплатив только один раз, Вы&nbsp;можете бесплатно продлевать участие в&nbsp;мастер-группе сколь угодно долго!
+					p Чтобы получить бесплатное продление на&nbsp;1&nbsp;месяц, Вам необходимо в&nbsp;начале месяца опубликовать в&nbsp;личном разделе мастер-группы свой отчет о&nbsp;сделках. Нам важен Ваш финансовый успех, поэтому мы&nbsp;будем с&nbsp;Вами работать в&nbsp;мастер-группе до&nbsp;тех пор, пока&nbsp;Вы будете активно заниматься инвестициями.
+				+e.baner-col.col-auto
+					+e.baner
+						+e.baner-txt Внимание! После того, как в&nbsp;мастер-группе будет собрана активная команда учеников, бесплатное продление перестанет быть доступным для новых участников.
+						+e.baner-bg
+							img.lazy(src='#' data-src="img/@2x/head-img.png" alt="")
+			.text-center
+				+e.inspire-txt Ловите момент!
+				+e.get-access-btn Получить доступ в мастер-группу
 	// end sSuper

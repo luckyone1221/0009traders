@@ -1,9 +1,24 @@
 mixin sRecommended()
 	// start sRecommended
-	+b.SECTION.sRecommended.section#sRecommended&attributes(attributes)
+	+b.SECTION.sRecommended#sRecommended&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sRecommended
-				
-			.row
+			+b.section-title
+				h2 Почему мы советуем выбрать тариф с мастер-группой?
+				p Потому что после тренинга, приступив к&nbsp;практике в&nbsp;команде мастер-группы,&nbsp;Вы не&nbsp;останетесь один на&nbsp;один со&nbsp;своими вопросами и&nbsp;сложностями.
+				p Мастер-группа Романа Романовича&nbsp;&mdash; это практические занятия раз в&nbsp;две недели, на&nbsp;которых&nbsp;Вы вместе с&nbsp;Романом:
+			+e.row.row
+				+recomendedItem(1 , 'анализируете текущую ситуацию в мировой экономике и принимаете решения о дальнейшей корректировке портфеля;')
+				+recomendedItem(2 , 'проводите поиск новых инвестиционных идей на среднесрочную и долгосрочную перспективу')
+				+recomendedItem(3 , 'предлагаете для разбора на занятии найденный Вами компании;')
+				+recomendedItem(4 , 'разбираете непонятные моменты, возникающие вопросы и сложности;')
+				+recomendedItem(5 , 'получаете постоянную подпитку новыми знаниями от инвестора-практика;')
+				+recomendedItem(6 , 'работаете в команде единомышленников, которые тоже выбрали инвестиционный путь;')
+				+recomendedItem(7 , 'осваиваете новые инструменты и стратегии.')
 	// end sRecommended
+
+mixin recomendedItem(imgNum, itemTxt)
+	+e.col.col-md-6
+		+e.col-content
+			+e.col-img
+				img.lazy(src="#" data-src=`img/sRecomended-${imgNum}.svg` alt="")
+			p=itemTxt
