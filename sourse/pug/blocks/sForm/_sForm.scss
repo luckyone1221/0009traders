@@ -290,6 +290,11 @@
 			@include media-breakpoint-up(xl){
 				transform: translateX(-41%);
 			}
+
+			@include media-breakpoint-up(xl){
+				height: auto;
+				top: -14px;
+			}
 		}
 	}
 	//form-wrap
