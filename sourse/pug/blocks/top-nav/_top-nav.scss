@@ -10,6 +10,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
+	z-index: 200;
 	@include mt;
 	&.fixed{
 		position: fixed;
@@ -17,7 +18,7 @@
 			padding-top: rem(10);
 			padding-bottom: rem(10);
 	}
-	 z-index: 4;
+	//  z-index: 4;
 	&__logo{
 			@include media-breakpoint-up(xl) {
 
