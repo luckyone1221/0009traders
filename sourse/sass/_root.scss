@@ -3,9 +3,11 @@
 	@include media-breakpoint-up(md) {
 
 		--sTPB: #{rem(40)};
+		--sPT: #{rem(70)};
+		--sPB: #{rem(60)};
 	}
-	--sPT: #{rem(70)};
-	--sPB: #{rem(70)};
+	--sPT: #{rem(70 * .8)};
+	--sPB: #{rem(60 * .8)};
 	--sTPB: #{rem(20)};
  
 }

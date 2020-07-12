@@ -5,7 +5,14 @@
 			@include roww(rem(40));
 		}
 		&__col{
-			margin-bottom: rem(40);
+			&:nth-child(1){
+
+				margin-bottom: rem(40);
+			}
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(sm) {
+				// margin-bottom: rem(40);
+		}
 		}
 		&__item{
 				@include media-breakpoint-up(sm) {
