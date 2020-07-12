@@ -7,11 +7,11 @@ $h: em(2);
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	// color: $primary;
+	color: #ffffff;
 	font-size: 32px;
 
 	&.on {
-		color: #ffffff;
 	}
 
 	span:after,
@@ -28,11 +28,11 @@ $h: em(2);
 	span:before {
 
 
-		top: $h * 2;
+		top: $h * 3;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 3;
 	}
 
 	span {
@@ -45,7 +45,7 @@ $h: em(2);
 	span:before {
 		// width: 32px;
 		width: 1em;
-		height: $h;
+		height: 2px;
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
