@@ -121,25 +121,11 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/frame2.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/frame2.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+ 
 
 	// /закрыть/открыть мобильное меню
 
@@ -147,8 +133,9 @@ function eventHandler() {
  
 		// скрывает моб меню
 
-		const topH = document.querySelector('header').scrollHeight;
+		const topH = document.querySelector('header').scrollHeight * .6;
 		let stickyElement = document.querySelector('.top-nav')
+	 
 		window.onscroll = () => {
 			if ($(window).scrollTop() > topH) {
 
@@ -164,11 +151,11 @@ function eventHandler() {
 	}
 
 	window.addEventListener('resize', () => {
-		//heightses();
+		heightses();
 
 	});
 
-	//heightses();
+	heightses();
 
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -206,63 +193,7 @@ function eventHandler() {
 
 	});
 	// modal window
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-	$("form").submit(function (e) {
-		e.preventDefault();
-		const th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data,
-		}).done(function (data) {
-
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			});
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () { });
-
-	});
+ 
 	//luckyoneJS
 	$('.block-header-js').click(function () {
 		$(this).toggleClass('active');
@@ -339,7 +270,7 @@ function eventHandler() {
 	let studentsSlider = new Swiper('.students-slider-js', {
 		slidesPerView: 1,
 		loop: true,
-
+		autoHeight: true,
 		//nav
 		navigation: {
 			nextEl: '.master-slider-next',

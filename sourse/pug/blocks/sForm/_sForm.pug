@@ -15,12 +15,12 @@ mixin sForm()
 				+e.man-img
 					img.lazy(src='#' data-src="img/@2x/form-man.png" alt="")
 				+form-wrap()
-					+input('Ваше имя', 'text', undefined, 'name')(required)
-					+input('+7 ( ____ ) ____ - ___ - ___', 'tel', undefined)(required)
-					+input('E-mail (необязательно)', 'email')
+					+input('Ваше имя', 'text', '', 'fullname')(required)
+					+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
+					+input('E-mail (необязательно)', 'email','','email')
 					+e.BUTTON.submit-btn(type="submit") Получить доступ в мастер-группу
 			+b.polite
 				| Заполняя форму Вы соглашаетесь с условиями
 				|
-				a(href='#') пользовательского соглашения
+				a( href="https://info-dvd.ru/bbm/../../oferta?popup=1" target="_blank") пользовательского соглашения
 	// end sForm

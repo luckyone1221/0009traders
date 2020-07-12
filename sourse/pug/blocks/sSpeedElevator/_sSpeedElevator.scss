@@ -2,6 +2,8 @@
 	// start .sSpeedElevator
 	.sSpeedElevator {
 		background: linear-gradient(180deg, rgba(39, 55, 206, 0) 0%, rgba(39, 55, 206, 0.05) 100%);
+		position: relative;
+		z-index: 5;
 		&__head{
 
 			background-image: url(../img/elevator-bg.svg);

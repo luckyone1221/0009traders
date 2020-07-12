@@ -19,6 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="//info-dvd.ru/bbm/css/bbm_form.css?20200229"/>
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
@@ -30,15 +31,15 @@
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Формула успеха</a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#sFormula" itemprop="url">Формула успеха</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Инструменты</a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#sForm" itemprop="url">Инструменты</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Стратегии </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#sHave" itemprop="url">Стратегии </a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Автор</a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#sMaster" itemprop="url">Автор</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Программа</a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#sTrainingProgramm" itemprop="url">Программа</a>
 						</li>
 					</ul>
 					<div class="text-right"></div>
@@ -56,19 +57,19 @@
 								</div>
 								<div class="col d-none d-lg-block">
 									<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Формула успеха</a>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#sFormula" itemprop="url">Формула успеха</a>
 										</li>
-										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Инструменты</a>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#sForm" itemprop="url">Инструменты</a>
 										</li>
-										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Стратегии </a>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#sHave" itemprop="url">Стратегии </a>
 										</li>
-										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Автор</a>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#sMaster" itemprop="url">Автор</a>
 										</li>
-										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Программа</a>
+										<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#sTrainingProgramm" itemprop="url">Программа</a>
 										</li>
 									</ul>
 								</div>
-								<div class="col-auto"> <a class="top-nav__btn" href="#">Оформить участие</a>
+								<div class="col-auto"> <a class="top-nav__btn scroll-link" href="#s-form">Оформить участие</a>
 								</div>
 								<div class="col-auto d-lg-none"> 
 									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -324,13 +325,10 @@
 						<div class="form-cont__man-img"><img class="lazy" src="#" data-src="img/@2x/form-man.png" alt=""/>
 						</div>
 						<div class="form-wrap">
-							<form>
-								<input type="hidden" name="example-input-field"/>
-								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-								<input class="utm_source" type="hidden" name="utm_source"/>
-								<input class="utm_term" type="hidden" name="utm_term"/>
-								<input class="utm_medium" type="hidden" name="utm_medium"/>
-								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+							<form id="bf262_form" action="//info-dvd.ru/bbm/order/otcconsult/?bform_id=262" method="POST" accept-charset="windows-1251" onsubmit="return bf262.check();"><input type="hidden" name="good_id" value="otcconsult">
+<input type="hidden" name="bform_id" value="262">
+<input type="hidden" name="comment_author" value="">
+<input type="hidden" name="comment_text" value="">
 								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="name" required="required"/>
 								</div>
 								<!-- +e.input-wrap-->
@@ -400,13 +398,10 @@
 		</div>
 		<div class="d-none">
 			<div class="form-wrap modal-win modal-form" id="modal-call">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+				<form id="bf262_form" action="//info-dvd.ru/bbm/order/otcconsult/?bform_id=262" method="POST" accept-charset="windows-1251" onsubmit="return bf262.check();"><input type="hidden" name="good_id" value="otcconsult">
+<input type="hidden" name="bform_id" value="262">
+<input type="hidden" name="comment_author" value="">
+<input type="hidden" name="comment_text" value="">
 					<div class="text-center">
 						<div class="form-wrap__title h3 ttu">Обратный звонок
 						</div>

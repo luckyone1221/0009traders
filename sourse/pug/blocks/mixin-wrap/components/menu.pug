@@ -1,11 +1,11 @@
 mixin mnu()
 	-
 		var nav= { 
-			"Формула успеха":"#",
-			"Инструменты":"#",
-			"Стратегии ":"#",
-			"Автор":"#" ,
-			"Программа":"#",
+			"Формула успеха":"#sFormula",
+			"Инструменты":"#sForm",
+			"Стратегии ":"#sHave",
+			"Автор":"#sMaster" ,
+			"Программа":"#sTrainingProgramm",
 			}
 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav

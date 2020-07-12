@@ -5,7 +5,18 @@
 	}
 	padding-top: rem(15);
 	padding-bottom: rem(15);
-	 position: relative;
+	//  position: relative;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	@include mt;
+	&.fixed{
+		position: fixed;
+		background-color: $primary;
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+	}
 	 z-index: 4;
 	&__logo{
 			@include media-breakpoint-up(xl) {

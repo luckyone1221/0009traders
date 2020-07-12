@@ -1,11 +1,9 @@
 
 	// start .sHave
 	.sHave {
-		 background: linear-gradient(122.38deg, #2737CE 31.5%, #4C0A81 83.94%);
-		background-image: url(../img/@2x/sHave-bg.jpg);
+		 background: url(../img/@2x/sHave-bg.jpg), linear-gradient(122.38deg, #2737CE 31.5%, #4C0A81 83.94%); 
 		position: relative;
-		z-index: 2;
-		@include bgs;
+		z-index: 2; 
 		color: #ffffff;
 	
 		h2{
