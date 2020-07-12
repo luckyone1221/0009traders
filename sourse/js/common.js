@@ -267,8 +267,8 @@ function eventHandler() {
 	}
 	//footer date
 	function footerDate(){
-		let footerDate = document.querySelector('.set-footer-date-js');
-		footerDate.innerHTML = '2008—' + new Date().getFullYear() + ' © издательство Info-DVD.Ru'
+		let footerDate = document.querySelector('.set-footer-date-js .year');
+		footerDate.innerHTML =  new Date().getFullYear()
 	}
 
 	footerDate();
