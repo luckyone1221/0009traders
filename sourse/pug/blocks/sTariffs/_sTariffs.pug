@@ -33,28 +33,28 @@ mixin sTariffs()
 	// end sTariffs
 
 mixin priceTableHeader(base='base',master='master', VIP='VIP')
-	+e.item-txt-col.col-6.header-txt-col
-	+e.val-col.col-2.base-col.header-col=base
-	+e.val-col.col-2.master-col.header-col.active=master
-	+e.val-col.col-2.vip-col.header-col=VIP
+	+e.item-txt-col.col-lg-6.col-12.header-txt-col.d-none.d-md-block
+	+e.val-col.col-md-2.col-4.base-col.header-col=base
+	+e.val-col.col-md-2.col-4.master-col.header-col.active=master
+	+e.val-col.col-md-2.col-4.vip-col.header-col=VIP
 
 mixin priceTableLine(headline='headline', base='+',master='+', VIP='+')
-	+e.item-txt-col.col-6=headline
-	+e.val-col.col-2=base
-	+e.val-col.col-2=master
-	+e.val-col.col-2=VIP
+	+e.item-txt-col.col-lg-6.col-12=headline
+	+e.val-col.col-md-2.col-4=base
+	+e.val-col.col-md-2.col-4=master
+	+e.val-col.col-md-2.col-4=VIP
 
 mixin strokedLine(headline='headline', base='+',master='+', VIP='+')
-	+e.item-txt-col.col-6=headline
-	+e.val-col.col-2.stroked=base
-	+e.val-col.col-2.stroked=master
-	+e.val-col.col-2.stroked=VIP
+	+e.item-txt-col.col-lg-6.col-12=headline
+	+e.val-col.col-md-2.col-4.stroked=base
+	+e.val-col.col-md-2.col-4.stroked=master
+	+e.val-col.col-md-2.col-4.stroked=VIP
 
 mixin priceTableFooter(base='base',master='master', VIP='VIP')
-	+e.item-txt-col.col-6.footer-txt-col
-	+e.val-col.col-2.footer-col
+	+e.item-txt-col.col-lg-6.col-12.footer-txt-col.d-none.d-md-block
+	+e.val-col.col-md-2.col-4.footer-col
 		+e.A.chose-btn(href="#")=base
-	+e.val-col.col-2.footer-col
+	+e.val-col.col-md-2.col-4.footer-col
 		+e.A.chose-btn(href="#")=master
-	+e.val-col.col-2.footer-col
+	+e.val-col.col-md-2.col-4.footer-col
 		+e.A.chose-btn(href="#")=VIP

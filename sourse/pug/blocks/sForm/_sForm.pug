@@ -10,17 +10,5 @@ mixin sForm()
 				+e.step Если необходимо, Вас проконсультирует менеджер Инфо-ДВД по&nbsp;указанному Вами номеру телефона
 				+e.step Выберите тариф участия, оплатите его стоимость
 				+e.step Уже через одну минуту после оплаты Вам откроется доступ в&nbsp;закрытый раздел группы тренинга с&nbsp;обучающими материалами
-			+b.form-cont
-				+e.form-txt Чтобы оплатить участие нужно всего лишь заполнить форму и&nbsp;оплатить участие
-				+e.man-img
-					img.lazy(src='#' data-src="img/@2x/form-man.png" alt="")
-				+form-wrap()
-					+input('Ваше имя', 'text', '', 'fullname')(required)
-					+input('+7 ( ____ ) ____ - ___ - ___', 'tel','', 'phone')(required)
-					+input('E-mail (необязательно)', 'email','','email')
-					+e.BUTTON.submit-btn(type="submit") Получить доступ в мастер-группу
-			+b.polite
-				| Заполняя форму Вы соглашаетесь с условиями
-				|
-				a( href="https://info-dvd.ru/bbm/../../oferta?popup=1" target="_blank") пользовательского соглашения
+			+form-cont()
 	// end sForm
