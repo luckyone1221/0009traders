@@ -273,8 +273,14 @@ function eventHandler() {
 			for (_iterator.s(); !(_step = _iterator.n()).done;) {
 				var elem = _step.value;
 				elem.addEventListener('click', function () {
-					event.preventDefault();
 					var destinyID = this.getAttribute('href'); //this.attributes.href.nodeValue
+
+					if (document.body.classList.contains('tarif-page')) {
+						this.setAttribute('href', '/' + destinyID);
+						return;
+					} else {
+						event.preventDefault();
+					}
 
 					var destinyElem = document.querySelector(destinyID);
 					if (!destinyElem) return;

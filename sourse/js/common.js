@@ -302,9 +302,16 @@ function eventHandler() {
 
 		for (let elem of elements){
 			elem.addEventListener('click', function () {
-				event.preventDefault();
 
 				let destinyID = this.getAttribute('href'); //this.attributes.href.nodeValue
+				if (document.body.classList.contains('tarif-page')){
+					this.setAttribute('href', '/' + destinyID);
+					return;
+				}
+				else {
+					event.preventDefault();
+				}
+
 				let destinyElem = document.querySelector(destinyID);
 				if (!destinyElem) return
 

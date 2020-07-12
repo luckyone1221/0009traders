@@ -22,8 +22,10 @@ mixin footer()
 					+e.support
 						+e.bold-txt Служба поддержки:
 						+e.inline-links
-							a(href="https://info.support-desk.ru/form") Задать свой вопрос
-							a.ancor-js(href="#sFAQ") Частые вопросы и ответы на них
+							a(href="https://info.support-desk.ru/form")
+								span Задать свой вопрос
+							a.ancor-js(href="#sFAQ")
+								span Частые вопросы и ответы на них
 					+e.callback
 						+e.bold-txt Позвоните нам:
 						+e.inline-links
