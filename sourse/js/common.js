@@ -265,6 +265,13 @@ function eventHandler() {
 		}
 		return timeItem
 	}
+	//footer date
+	function footerDate(){
+		let footerDate = document.querySelector('.set-footer-date-js');
+		footerDate.innerHTML = '2008—' + new Date().getFullYear() + ' © издательство Info-DVD.Ru'
+	}
+
+	footerDate();
 
 	//
 	let studentsSlider = new Swiper('.students-slider-js', {
@@ -288,6 +295,54 @@ function eventHandler() {
 			//loadPrevNextAmount: 2,
 		},
 	});
+	//footer ancor
+	function smoothScroll(qSelector){
+		let elements = document.querySelectorAll(qSelector);
+		if (elements.length === 0) return
+
+		for (let elem of elements){
+			elem.addEventListener('click', function () {
+
+				let destinyID = this.getAttribute('href'); //this.attributes.href.nodeValue
+				if (document.body.classList.contains('tarif-page')){
+					this.setAttribute('href', '/' + destinyID);
+					return;
+				}
+				else {
+					event.preventDefault();
+				}
+
+				let destinyElem = document.querySelector(destinyID);
+				if (!destinyElem) return
+
+				let destinyTop = getCoords(destinyElem).top;
+
+				window.scrollTo({
+					top: destinyTop,
+					behavior: "smooth"
+				});
+
+			});
+		}
+	}
+	smoothScroll('.ancor-js');
+	function getCoords(elem) { // crossbrowser version
+		var box = elem.getBoundingClientRect();
+
+		var body = document.body;
+		var docEl = document.documentElement;
+
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+		var top  = box.top +  scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+
+		return { top: Math.round(top), left: Math.round(left) };
+	}
 
 	//end luckyoneJS
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
